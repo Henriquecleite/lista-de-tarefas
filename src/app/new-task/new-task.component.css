@@ -1,0 +1,103 @@
+form .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #00000067;
+  display: flex;
+}
+
+.lds-ring {
+  margin: auto;
+  width: 96px;
+  height: 96px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  margin: 6px;
+  border: 6px solid #423080;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #423080 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+form .row {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0;
+}
+
+form .row label {
+  margin-bottom: 5px;
+  color: #24155a;
+  font-weight: bold;
+}
+
+form .row input {
+  width: 300px;
+  padding: 5px 10px;
+  border: 1px solid #00000033;
+  outline: none;
+  font-size: 18px;
+  font-family: 'Lobster', sans-serif;
+}
+
+form .row input:focus {
+  border-color: #988cc4;
+}
+
+form .row input::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+form .row input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+form .row .save-button {
+  flex-basis: 40px;
+  width: 100px;
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #423080;
+  border-radius: 5px;
+  background-color: #423080;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+}
+
+form .row .save-button:hover {
+  border-color: #2a1b5f;
+  background-color: #2a1b5f;
+}

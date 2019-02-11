@@ -1,0 +1,30 @@
+.navbar {
+  height: 70px;
+  display: flex;
+  background-color: #6a55b0;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .item {
+  flex: 1;
+  padding: 0 40px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 70px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+  outline: none;
+}
+
+.navbar .item:hover, .navbar .item.active {
+  background-color: #423080;
+}
+
+@media (min-width: 720px) {
+  .navbar .item {
+    flex: 0 0 120px;
+  }
+}

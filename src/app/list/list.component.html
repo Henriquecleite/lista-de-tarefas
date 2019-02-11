@@ -1,0 +1,37 @@
+<div class="list">
+  <div class="filter">
+    <div class="title">Filtro</div>
+    <div class="status-filter">
+      <div class="button" [ngClass]="{closed: statusFilter === 'concluído'}" (click)="onChangeStatusFilter()"></div>
+      <div class="text">Tarefas Concluídas</div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="description">Descrição
+      <span class="sort-button" (click)="onDescriptionSort()">
+        <div class="up">&#9652;</div>
+        <div class="down">&#9662;</div>
+      </span>
+    </div>
+    <div class="date">Data
+      <span class="sort-button" (click)="onDateSort()">
+        <div class="up">&#9652;</div>
+        <div class="down">&#9662;</div>
+      </span>
+    </div>
+    <div class="status">Status</div>
+  </div>
+  <ng-container *ngFor="let item of tasks">
+    <div class="list-item" *ngIf="item.status === statusFilter">
+      <div class="description">{{ item && item.description }}</div>
+      <div class="date">{{ item && item.date | date:'dd/MM/yy' }}</div>
+      <div class="status">{{ item && item.status }}</div>
+      <div class="status-button" (click)="onChangeStatus(item.id)">
+        <div class="text">{{ statusFilter === 'aberto' ? 'Concluir' : 'Reabrir' }}</div>
+      </div>
+      <div class="delete-button" (click)="onDeleteTask(item.id)">
+        <div class="text">&#10006;</div>
+      </div>
+    </div>
+  </ng-container>
+</div>

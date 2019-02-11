@@ -1,0 +1,22 @@
+.main {
+  padding: 30px;
+}
+
+@media (min-width: 720px) {
+  .main {
+    margin: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px #00000033;
+  }
+}
+
+@media (min-width: 800px) {
+  .main {
+    width: 680px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px #00000033;
+  }
+}

@@ -1,0 +1,164 @@
+.list .filter {
+  height: 80px;
+}
+
+.list .filter .title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.list .filter .status-filter {
+  height: 25px;
+  margin-left: 10px;
+  display: flex;
+}
+
+.list .filter .status-filter .button {
+  box-sizing: border-box;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #423080;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.list .filter .status-filter .button.closed {
+  background-color: #423080;
+}
+
+.list .filter .status-filter .text {
+  margin-left: 8px;
+  line-height: 25px;
+}
+
+.list .header {
+  display: flex;
+  height: 20px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+.list .header .description {
+  flex-basis: 35%;
+  display: flex;
+}
+
+.list .header .description .sort-button, .list .header .date .sort-button {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.list .header .description .sort-button .up, .list .header .date .sort-button .up {
+  flex-basis: 7px;
+  line-height: 7px;
+  text-align: end;
+}
+.list .header .description .sort-button .down, .list .header .date .sort-button .down {
+  flex-basis: 7px;
+  line-height: 7px;
+}
+
+.list .header .date {
+  flex-basis: 18%;
+  min-width: 70px;
+  display: flex;
+}
+
+.list .header .status {
+  flex-basis: 15%;
+  min-width: 55px;
+}
+
+.list .list-item {
+  height: 25px;
+  margin: 10px 0;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  color: #383838;
+}
+
+.list .list-item .description {
+  flex-basis: 35%;
+  min-width: 112px;
+  line-height: 25px;
+}
+
+.list .list-item .date {
+  flex-basis: 18%;
+  min-width: 70px;
+  line-height: 25px;
+}
+
+.list .list-item .status {
+  flex-basis: 15%;
+  min-width: 55px;
+  line-height: 25px;
+}
+
+.list .list-item .status-button {
+  display: flex;
+  flex-basis: 17%;
+  min-width: 70px;
+  border: 2px solid #423080;
+  border-radius: 5px;
+  background-color: #423080;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.list .list-item .status-button:hover {
+  border-color: #2a1b5f;
+  background-color: #2a1b5f;
+}
+
+.list .list-item .status-button .text {  
+  margin: auto;
+}        
+
+.list .list-item .delete-button {  
+  flex-basis: 5%;
+  min-width: 18px;
+  margin-left: 8px;
+  border-radius: 20%;
+  display: flex;
+  background-color: #ff0000;
+  color: #ffffff;
+  cursor: pointer;
+}    
+
+.list .list-item .delete-button:hover { 
+  background-color: #c50000;
+}
+                         
+.list .list-item .delete-button .text {  
+  margin: auto;
+}                             
+
+@media (min-width: 720px) {
+  .list .header .description {
+    flex-basis: 45%;
+  }
+
+  .list .list-item .description {
+    flex-basis: 45%;
+    padding-left: 8px;
+  }
+
+  .list .list-item .date {
+    padding-left: 8px;
+  }
+
+  .list .list-item .status {
+    padding-left: 8px;
+  }
+}

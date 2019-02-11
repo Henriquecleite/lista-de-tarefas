@@ -1,0 +1,26 @@
+<form [formGroup]="newTaskForm" (ngSubmit)="onSubmit()">
+  <div *ngIf="loading" class="overlay">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+  <div class="row">
+    <label for="description">Descrição</label>
+    <input
+      type="text"
+      id="description"
+      formControlName="description">
+  </div>
+  <div class="row">
+    <label for="date">Data</label>
+    <input
+      type="date"
+      id="date"
+      formControlName="date">
+  </div>
+  <div class="row">
+    <button
+      class="save-button"
+      type="submit">
+      Salvar
+    </button>
+  </div>
+</form>
