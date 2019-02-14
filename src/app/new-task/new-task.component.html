@@ -8,6 +8,9 @@
       type="text"
       id="description"
       formControlName="description">
+    <div *ngIf="submitTry && newTaskForm.controls.description.invalid" class="validity-message">
+      Este campo deve ser preenchido
+    </div>
   </div>
   <div class="row">
     <label for="date">Data</label>
@@ -15,6 +18,9 @@
       type="date"
       id="date"
       formControlName="date">
+    <div *ngIf="submitTry && newTaskForm.controls.date.invalid" class="validity-message">
+      Este campo deve ser preenchido
+    </div>
   </div>
   <div class="row">
     <button

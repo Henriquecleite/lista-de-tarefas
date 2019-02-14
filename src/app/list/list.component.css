@@ -41,7 +41,7 @@
 }
 
 .list .header .description {
-  flex-basis: 35%;
+  flex-basis: 30%;
   display: flex;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .list .header .date {
-  flex-basis: 18%;
+  flex-basis: 23%;
   min-width: 70px;
   display: flex;
 }
@@ -85,20 +85,17 @@
 }
 
 .list .list-item .description {
-  flex-basis: 35%;
-  min-width: 112px;
+  flex-basis: 30%;
   line-height: 25px;
 }
 
 .list .list-item .date {
-  flex-basis: 18%;
-  min-width: 70px;
+  flex-basis: 23%;
   line-height: 25px;
 }
 
 .list .list-item .status {
   flex-basis: 15%;
-  min-width: 55px;
   line-height: 25px;
 }
 
@@ -155,10 +152,10 @@
   }
 
   .list .list-item .date {
-    padding-left: 8px;
+    padding-left: 45px;
   }
 
   .list .list-item .status {
-    padding-left: 8px;
+    padding-left: 35px;
   }
 }

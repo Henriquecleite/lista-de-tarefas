@@ -1,3 +1,7 @@
+form {
+  padding-left: 10px;
+}
+
 form .overlay {
   position: absolute;
   top: 0;
@@ -80,6 +84,12 @@ form .row input::-webkit-inner-spin-button {
 
 form .row input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+form .row .validity-message {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #ff0000;
 }
 
 form .row .save-button {

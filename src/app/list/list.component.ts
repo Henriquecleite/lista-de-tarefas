@@ -60,12 +60,14 @@ export class ListComponent implements OnInit {
   onDescriptionSort() {
     if (this.descriptionSort === 'up') {
       this.tasks.sort( (a, b) => (
-        +(a.description < b.description) || +(a.description === b.description) - 1
+        +(a.description.toLowerCase() < b.description.toLowerCase()) || 
+        +(a.description.toLowerCase() === b.description.toLowerCase()) - 1
       ));
       this.descriptionSort = 'down';
     } else if (this.descriptionSort === 'down') {
       this.tasks.sort( (a, b) => (
-        +(a.description > b.description) || +(a.description === b.description) - 1
+        +(a.description.toLowerCase() > b.description.toLowerCase()) || 
+        +(a.description.toLowerCase() === b.description.toLowerCase()) - 1
       ));
       this.descriptionSort = 'up';
     }
